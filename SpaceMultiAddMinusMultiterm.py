@@ -54,6 +54,7 @@ class Interpreter:
             if self.curr_char == '-':
                 self.advance()
                 return Token(MINUS, '-')
+            self.error()
         return Token(EOF, None)
 
     def expr(self):
